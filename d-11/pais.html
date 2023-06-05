@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>País de origem!</title>
+  </head>
+  <body>
+    <h1>País de origem</h1>
+    <input
+      type="text"
+      name="pais"
+      id="ipais"
+      placeholder="De que país você é?"
+    />
+    <input type="button" value="Verificar" onclick="origem()" />
+
+    <div id="res">Resultado</div>
+
+    <script>
+      function origem() {
+        const p = ipais.value;
+        const r = res;
+
+        r.innerHTML = `Você mora em ${p}`;
+        r.innerHTML +=
+          p.toLowerCase() === "brasil"
+            ? `<p>Você é brasileiro!</p>`
+            : `<p>Você é estrangeiro!</p>`;
+      }
+    </script>
+  </body>
+</html>
