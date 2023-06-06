@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Verificador de Idade</title>
+</head>
+<body>
+  <header>
+    <h1>Verificador de Idade</h1>
+  </header>
+  
+  <main>
+    <div>
+      <form>
+        <p>
+          <label for="ianonasc">Ano de Nascimento:</label>
+          <input type="number" name="ano" id="ianonasc" min="0" maxlength="4" placeholder="2023" required>
+        </p>
+
+        <p>
+          <label for="isexo">Sexo:</label>
+          <input type="radio" name="sexo" id="masc" checked required>
+          <label for="masc">Masculino</label>
+          <input type="radio" name="sexo" id="fem" required>
+          <label for="fem">Feminino</label>
+        </p>
+        
+        <p id="res">
+          Preencha os dados acima para ver o resultado!
+        </p>
+
+        <p class="enviar">
+          <input type="button" value="Verificar" onclick="verificar()">
+        </p>
+        
+      </form>
+    </div>
+    <div id="res-container" class="hidden">
+      <div class="img-container">
+        <img id="foto" src="" alt="">
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://github.com/crilord" target="_blank" rel="external">crilord</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
