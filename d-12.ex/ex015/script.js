@@ -48,3 +48,13 @@ function verificar() {
     resContainer.classList.remove("hidden");
   }
 }
+
+// Adiciona evento de tecla ao campo de entrada de ano de nascimento
+var inputAno = document.querySelector("#ianonasc");
+inputAno.addEventListener("keydown", function (event) {
+  // Verifica se a tecla pressionada é a tecla "Enter"
+  if (event.keyCode === 13) {
+    event.preventDefault(); // Impede o comportamento padrão do "Enter"
+    verificar(); // Chama a função de verificação
+  }
+});
