@@ -39,6 +39,10 @@ div p {
   width: 90px;
 }
 
+#res {
+  text-align: center;
+}
+
 .hidden {
   display: none;
 }
